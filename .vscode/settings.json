@@ -1,0 +1,11 @@
+{
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#121016",
+    "statusBar.debuggingBackground": "#121016",
+    "statusBar.debuggingForeground": "#525156",
+    "debugToolBar.background": "#121016",
+    "activityBar.background": "#56044F",
+    "titleBar.activeBackground": "#79066F",
+    "titleBar.activeForeground": "#FFF9FE"
+  }
+}
