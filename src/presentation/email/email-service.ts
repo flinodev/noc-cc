@@ -35,25 +35,13 @@ export class EmailService {
         html: htmlBody,
         attachments,
       });
-      const log = new LogEntity({
-        message: `Email sent to ${to}`,
-        level: LogSeverityLevel.low,
-        origin: "email-service.ts",
-      });
-      this.logRepository.saveLog(log);
       return true;
     } catch (error) {
-      const log = new LogEntity({
-        message: `Failed to try sent email to ${to}`,
-        level: LogSeverityLevel.high,
-        origin: "email-service.ts",
-      });
-      this.logRepository.saveLog(log);
       return false;
     }
   }
 
-  async sendEmailWithFileSystemLogs(to: string | string[]) {
+  async sendEmailWithFileSystemLogs(to: string | string[]): Promise<boolean> {
     const subject = "System Server Logs";
     const htmlBody = `
       <h3>Systems Logs - NOC </h3>
@@ -65,6 +53,6 @@ export class EmailService {
       { filename: "logs-high.log", path: "./logs/logs-high.log" },
       { filename: "logs-medium.log", path: "./logs/logs-medium.log" },
     ];
-    this.sendEmail({ to, subject, htmlBody, attachments });
+    return this.sendEmail({ to, subject, htmlBody, attachments });
   }
 }
