@@ -13,7 +13,7 @@ export class FileSystemDatasource implements LogDatasource {
   }
 
   private createLogsFiles = () => {
-    if (fs.existsSync(this.logPath)) {
+    if (!fs.existsSync(this.logPath)) {
       fs.mkdirSync(this.logPath);
     }
     [this.allLogPath, this.mediumLogPath, this.highLogPath].forEach((path) => {
