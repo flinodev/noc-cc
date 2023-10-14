@@ -1,4 +1,3 @@
-import { envs } from "../config/plugins/envs.plugin";
 import { CheckService } from "../domain/use-cases/check-service";
 import { SendEmailLogs } from "../domain/use-cases/emails/send-logs";
 import { FileSystemDatasource } from "../infrastructure/datasources/file-system.datasource";
