@@ -19,6 +19,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@prisma/client": "^5.4.2",
     "cron": "^3.1.0",
     "dotenv": "^16.3.1",
     "env-var": "^7.4.1",
