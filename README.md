@@ -10,7 +10,13 @@ The goal is to create an application that performs a series of tasks every so of
 4. Up database with the command
 
 ```
-docker compose up -d
+  docker compose up -d
 ```
 
-5. Execute `npm run dev`
+5. Ejectuar el comando
+
+```
+  npx prisma migrate dev
+```
+
+6. Execute `npm run dev`
